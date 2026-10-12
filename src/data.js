@@ -635,6 +635,7 @@ export const partners = [
   {
     id: 1,
     name: 'ICL',
+    logo: '/images/partners/icl.png',
     site: 'https://www.icl.ru/',
     color: '#E4002B',
     description:
@@ -643,6 +644,7 @@ export const partners = [
   {
     id: 2,
     name: 'ТАТНЕФТЬ',
+    logo: '/images/partners/tatneft.png',
     site: 'https://www.tatneft.ru/',
     color: '#00A03B',
     description:

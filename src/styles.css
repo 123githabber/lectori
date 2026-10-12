@@ -41,7 +41,7 @@ section {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: linear-gradient(90deg, #6d94d6, #3b6fd4);
+  background: linear-gradient(90deg, #9DB1D2 12.02%, #8CB6FB 49.52%, #ADACAA 88.94%);
   box-shadow: 0 2px 12px rgb(30 79 176 / 0.25);
 }
 
@@ -55,7 +55,7 @@ section {
 .logo {
   font-size: 22px;
   font-weight: 800;
-  color: #fff;
+  color: #1f2937;
   cursor: pointer;
   letter-spacing: 0.5px;
   white-space: nowrap;
@@ -70,7 +70,7 @@ section {
 .nav__link {
   background: none;
   border: none;
-  color: #eaf1ff;
+  color: #1f2937;
   font-size: 16px;
   padding: 8px 14px;
   border-radius: 8px;
@@ -78,11 +78,11 @@ section {
 }
 
 .nav__link:hover {
-  background: rgb(255 255 255 / 0.15);
+  background: rgb(255 255 255 / 0.45);
 }
 
 .nav__link.active {
-  background: rgb(255 255 255 / 0.25);
+  background: rgb(255 255 255 / 0.6);
   font-weight: 600;
 }
 
@@ -93,7 +93,7 @@ section {
 }
 
 .header__phone {
-  color: #fff;
+  color: #1f2937;
   text-decoration: none;
   font-weight: 600;
   white-space: nowrap;
@@ -103,7 +103,7 @@ section {
   display: none;
   background: none;
   border: none;
-  color: #fff;
+  color: #1f2937;
   font-size: 26px;
   cursor: pointer;
   margin-left: auto;
@@ -130,12 +130,12 @@ section {
 .btn_small {
   padding: 8px 16px;
   font-size: 14px;
-  background: rgb(255 255 255 / 0.2);
-  border: 1px solid rgb(255 255 255 / 0.6);
+  background: #1f2937;
+  border: 1px solid #1f2937;
 }
 
 .btn_small:hover {
-  background: rgb(255 255 255 / 0.3);
+  background: #374151;
 }
 
 /* ---------- Sections ---------- */
@@ -262,6 +262,17 @@ section {
   padding: 20px;
 }
 
+.how__booking {
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+}
+
+.how__booking-title {
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
 /* ---------- Partners ---------- */
 .partners {
   display: grid;
@@ -284,16 +295,23 @@ section {
   transform: translateY(-2px);
 }
 
+.partner__head {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+}
+
 .partner__logo {
-  font-size: 34px;
-  font-weight: 800;
-  letter-spacing: 1px;
+  display: block;
+  height: 56px;
+  width: auto;
+  object-fit: contain;
 }
 
 .partner__arrow {
-  color: var(--blue);
-  font-size: 22px;
-  margin-left: 8px;
+  color: var(--text);
+  font-size: 64px;
+  line-height: 0.9;
 }
 
 .partner p {
@@ -490,21 +508,29 @@ section {
 
 /* ---------- Lecturer card ---------- */
 .card {
-  display: grid;
-  grid-template-columns: 180px 1fr;
-  gap: 20px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 20px;
 }
 
+.card__top {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
 .card__photo {
-  width: 180px;
+  display: block;
+  width: 100%;
   height: 220px;
   object-fit: cover;
   border-radius: var(--radius);
   border-bottom: 3px solid var(--blue);
-  align-self: start;
+}
+
+.card__body {
+  margin-top: 20px;
 }
 
 .card__name {
@@ -706,12 +732,11 @@ section {
     height: 220px;
   }
 
-  .card {
+  .card__top {
     grid-template-columns: 1fr;
   }
 
   .card__photo {
-    width: 100%;
     height: 260px;
   }
 

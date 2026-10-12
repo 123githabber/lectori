@@ -12,8 +12,10 @@ export default function Partners({ partners }) {
             rel="noreferrer"
             title={`Перейти на сайт ${p.name}`}
           >
-            <span className="partner__logo" style={{ color: p.color }}>{p.name}</span>
-            <span className="partner__arrow">→</span>
+            <div className="partner__head">
+              <img className="partner__logo" src={p.logo} alt={p.name} loading="lazy" />
+              <span className="partner__arrow" aria-hidden="true">↗</span>
+            </div>
             <p>{p.description}</p>
           </a>
         ))}

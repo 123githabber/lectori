@@ -6,13 +6,17 @@ export default function LecturerCard({ lecturer }) {
 
   return (
     <article className="card">
-      <img className="card__photo" src={lecturer.photo} alt={`Фото: ${lecturer.name}`} />
+      <div className="card__top">
+        <img className="card__photo" src={lecturer.photo} alt={`Фото: ${lecturer.name}`} />
+        <div className="card__intro">
+          <h3 className="card__name">{lecturer.name}</h3>
+          <p className="card__meta">
+            {lecturer.education} · Стаж {lecturer.experience} лет
+            {lecturer.degree ? ` · ${lecturer.degree}` : ''}
+          </p>
+        </div>
+      </div>
       <div className="card__body">
-        <h3 className="card__name">{lecturer.name}</h3>
-        <p className="card__meta">
-          {lecturer.education} · Стаж {lecturer.experience} лет
-          {lecturer.degree ? ` · ${lecturer.degree}` : ''}
-        </p>
         <div className="card__disciplines">
           {lecturer.disciplines.map((d) => (
             <details key={d.title}>

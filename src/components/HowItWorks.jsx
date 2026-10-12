@@ -1,3 +1,5 @@
+import BookingForm from './BookingForm.jsx'
+
 export default function HowItWorks({ steps, formats }) {
   return (
     <section className="section container" id="how">
@@ -18,6 +20,13 @@ export default function HowItWorks({ steps, formats }) {
             <p>{f.description}</p>
           </div>
         ))}
+      </div>
+      <div className="how__booking" id="how-booking">
+        <h3 className="how__booking-title">Оставить заявку</h3>
+        <p className="section__subtitle">
+          Опишите задачу — подберём лектора и предложим программу в течение дня.
+        </p>
+        <BookingForm />
       </div>
     </section>
   )
