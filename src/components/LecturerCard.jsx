@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import BookingForm from './BookingForm.jsx'
+import Tooltip from './Tooltip.jsx'
 
 export default function LecturerCard({ lecturer }) {
   const [open, setOpen] = useState(false)
@@ -11,8 +12,18 @@ export default function LecturerCard({ lecturer }) {
         <div className="card__intro">
           <h3 className="card__name">{lecturer.name}</h3>
           <p className="card__meta">
-            {lecturer.education} · Стаж {lecturer.experience} лет
-            {lecturer.degree ? ` · ${lecturer.degree}` : ''}
+            {lecturer.education} ·{' '}
+            <Tooltip content={`Стаж преподавания: ${lecturer.experience} лет.`}>
+              Стаж {lecturer.experience} лет
+            </Tooltip>
+            {lecturer.degree && (
+              <>
+                {' · '}
+                <Tooltip content={`Учёная степень: ${lecturer.degree}.`}>
+                  {lecturer.degree}
+                </Tooltip>
+              </>
+            )}
           </p>
         </div>
       </div>
