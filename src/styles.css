@@ -544,6 +544,33 @@ section {
   margin-bottom: 12px;
 }
 
+/* ---------- Portal tooltip ---------- */
+.tooltip-trigger {
+  cursor: help;
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+}
+
+.tooltip-trigger:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
+.tooltip {
+  position: fixed;
+  z-index: 200;
+  width: max-content;
+  max-width: min(280px, calc(100vw - 16px));
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: var(--text);
+  color: #fff;
+  font-size: 13px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.15);
+}
+
 .card__disciplines details {
   border-bottom: 1px solid var(--border);
   padding: 6px 0;
